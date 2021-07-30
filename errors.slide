@@ -1,19 +1,20 @@
-Errors
+Error handling
 
 30 Julio 2021
 Nacho González
 (jose.cardenas)
 
-* Que es un error?
+* ¿Qué es un error?
 
-Seguramente han leido codigo similar a 
+Seguramente han leído codigo similar a 
 
 .code code/example1.go
 
-* Muy usual en librerias
+* Estado anormal
 
 [[https://pkg.go.dev/os#Open][os.Open]]
-[[https://pkg.go.dev/encoding/json@go1.16.6][encoding/json]
+[[https://pkg.go.dev/encoding/json@go1.16.6][encoding/json]]
+[[https://pkg.go.dev/database/sql#DB.ExecContext][database/sql]]
 
 * Try Catch? Exception?
 
@@ -21,9 +22,11 @@ Seguramente han leido codigo similar a
 
 * Errors are values ⭐
 
-Flexibilidad
+No hay diferencia para el compilador.
 
-Tu defines la importancia de los errores.
+Flexibilidad.
+
+Tú defines la importancia de los errores.
 
 Depende del uso de caso y el contexto.
 
@@ -62,12 +65,11 @@ Los errores se pueden anotar.
 
 .code code/error-impl.go
 
-* Nuestro propio error
+* Nuestro propio error (DEMO)
 .code demo/5_custom_err/main.go /START OMIT/,/END OMIT/
 
-* Con mas funcionalidad
+* Con más funcionalidad (DEMO)
 .code demo/6_http_err/main.go /START OMIT/,/END OMIT/
-
 
 * Gotcha
 
@@ -75,9 +77,13 @@ Los errores se pueden anotar.
 
 * Tips
 
-* No basar tu codigo en el resultado de err.Error()
+* No basar tu código en el resultado de err.Error()
+
+.code code/string.go
 
 * Solo handlear errores una vez
+
+.code demo/8_once/main.go /START OMIT/,/END OMIT/
 
 
 * Mas sobre el tema
