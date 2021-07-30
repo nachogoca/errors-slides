@@ -1,27 +1,25 @@
-# Errors
+Errors
 
 30 Julio 2021
 Nacho González
 (jose.cardenas)
 
-## Que es un error?
-
+* Que es un error?
 
 Seguramente han leido codigo similar a 
 
 .code code/example1.go
 
-## Muy usual en librerias
+* Muy usual en librerias
 
-[os.Open](https://pkg.go.dev/os#Open)
-[json/encoding](https://pkg.go.dev/encoding/json@go1.16.6)
+[[https://pkg.go.dev/os#Open][os.Open]]
+[[https://pkg.go.dev/encoding/json@go1.16.6][encoding/json]
 
-## Try Catch? Exception?
+* Try Catch? Exception?
 
 .image images/dont.gif
 
-
-## Errors are values ⭐
+* Errors are values ⭐
 
 Flexibilidad
 
@@ -31,64 +29,63 @@ Depende del uso de caso y el contexto.
 
 .image images/rakegopher.png
 
-## Tipo de dato
+* Tipo de dato
 
 .code code/error-interface.go
 
 .code code/example2.go
 
+* Ejemplo: Hagamos un taco
 
-## Ejemplo: Hagamos un taco
-
-## 
+* 
 .code demo/1_ignore_err/main.go /START OMIT/,/END OMIT/
 
-## 
+* 
 .code demo/2_return_err/main.go /START OMIT/,/END OMIT/
 
-## Don't just check errors, handle them gracefully 🌸
+* Don't just check errors, handle them gracefully 🌸
 
 Piensa bien que debes hacer con el error, no solo retornarlo.
 
 Los errores se pueden anotar.
 
-##
+*
 .code demo/3_handle_err/main.go /START OMIT/,/END OMIT/
 
-##
+*
 .code demo/4_handle_err_const/main.go /START OMIT/,/END OMIT/
 
 
-## Interface
+* Interface
 
 .code code/error-interface.go
 
 .code code/error-impl.go
 
-## Nuestro propio error
+* Nuestro propio error
 .code demo/5_custom_err/main.go /START OMIT/,/END OMIT/
 
-## Con mas funcionalidad
+* Con mas funcionalidad
 .code demo/6_http_err/main.go /START OMIT/,/END OMIT/
 
 
-## Gotcha
+* Gotcha
 
 .code demo/7_gotcha/main.go
 
-## Tips
+* Tips
 
 * No basar tu codigo en el resultado de err.Error()
 
 * Solo handlear errores una vez
 
 
-## Mas sobre el tema
+* Mas sobre el tema
 
-https://blog.golang.org/error-handling-and-go
+[[https://blog.golang.org/error-handling-and-go][https://blog.golang.org/error-handling-and-go]]
 
-https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
+[[https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully][https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully]]
 
 Go proverbs
 
-https://www.youtube.com/watch?v=PAAkCSZUG1c&t=973s
+[[https://www.youtube.com/watch?v=PAAkCSZUG1c&t=973s][https://www.youtube.com/watch?v=PAAkCSZUG1c&t=973s]]
